@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, '../public')))
 
 // create routes
 app.get('/listing', (req, res) => {
-  axios.get(`http://54.193.221.78:3001//listing/?propertyId=${req.query.propertyId}`)
+  axios.get(`http://54.193.221.78:3001/listing/?propertyId=${req.query.propertyId}`)
     .then( (results) => {
       res.status(200).send(results.data);
     })

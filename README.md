@@ -2,6 +2,8 @@
 5erflies
 > Project description - FEC project
 
+Proxy server that aggregated the different microservices as well as rendered static images.
+
 ## Related Projects
 
   - https://github.com/5erflies/5erflies-hotel-more-places-service
@@ -16,7 +18,7 @@
 
 ## Usage
 
-> Some usage instructions
+> npm start
 
 ## Requirements
 

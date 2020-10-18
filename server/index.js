@@ -33,8 +33,8 @@ app.get('/reviews', (req, res) => {
       res.status(400).send(err);
     })
 })
-app.get('/test1', (req, res) => {
-  axios.get(`http://54.219.218.34:3003/test1/?propertyId=${req.query.propertyId}`)
+app.get('/morePlaces', (req, res) => {
+  axios.get(`http://54.219.218.34:3003/morePlaces/?propertyId=${req.query.propertyId}`)
     .then( (results) => {
       res.status(200).send(results.data);
     })

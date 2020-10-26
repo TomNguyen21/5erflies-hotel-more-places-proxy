@@ -16,7 +16,8 @@ app.use(express.static(path.join(__dirname, '../public')))
 
 // create routes
 app.get('/listing', (req, res) => {
-  axios.get(`http://54.193.221.78:3001/listing/?propertyId=${req.query.propertyId}`)
+  // axios.get(`http://54.193.221.78:3001/listing/?propertyId=${req.query.propertyId}`)
+  axios.get(`http://localhost:3001/listing/?propertyId=${req.query.propertyId}`)
     .then( (results) => {
       res.status(200).send(results.data);
     })
@@ -25,7 +26,8 @@ app.get('/listing', (req, res) => {
     })
 })
 app.get('/reviews', (req, res) => {
-  axios.get(`http://54.219.11.204:3002/reviews/?propertyId=${req.query.propertyId}`)
+  // axios.get(`http://54.219.11.204:3002/reviews/?propertyId=${req.query.propertyId}`)
+  axios.get(`http://localhost:3002/reviews/?propertyId=${req.query.propertyId}`)
     .then( (results) => {
       res.status(200).send(results.data);
     })
@@ -34,7 +36,8 @@ app.get('/reviews', (req, res) => {
     })
 })
 app.get('/morePlaces', (req, res) => {
-  axios.get(`http://54.219.218.34:3003/morePlaces/?propertyId=${req.query.propertyId}`)
+  // axios.get(`http://54.219.218.34:3003/morePlaces/?propertyId=${req.query.propertyId}`)
+  axios.get(`http://localhost:3003/morePlaces/?propertyId=${req.query.propertyId}`)
     .then( (results) => {
       res.status(200).send(results.data);
     })
